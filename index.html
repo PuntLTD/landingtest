@@ -15,25 +15,26 @@
 </head>
   
 <body class="bg-white dark:bg-gray-900">
-  <button id="modeButton" class="fixed top-0 right-0 m-4 p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-      <circle cx="12" cy="12" r="5"></circle>
-      <line x1="12" y1="1" x2="12" y2="3"></line>
-      <line x1="12" y1="21" x2="12" y2="23"></line>
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-      <line x1="1" y1="12" x2="3" y2="12"></line>
-      <line x1="21" y1="12" x2="23" y2="12"></line>
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-    </svg>
-  </button>
-
   <nav class="bg-white dark:bg-gray-900 fixed top-0 left-0 right-0 shadow-lg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
-        <div class="flex">
-          <!-- Add your navigation items here -->
+        <div class="flex items-center">
+          <!-- Add your logo or brand here -->
+        </div>
+        <div class="flex items-center">
+          <button id="modeButton" class="p-2 rounded-full hover:bg-gray-300 dark:hover:bg-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+              <path d="M12 20a8 8 0 100-16 8 8 0 000 16z"></path>
+              <path d="M12 2L12 6"></path>
+              <path d="M12 18L12 22"></path>
+              <path d="M4.22 4.22L5.64 5.64"></path>
+              <path d="M18.36 18.36L19.78 19.78"></path>
+              <path d="M1 12L3 12"></path>
+              <path d="M21 12L23 12"></path>
+              <path d="M4.22 19.78L5.64 18.36"></path>
+              <path d="M18.36 5.64L19.78 4.22"></path>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -234,11 +235,31 @@
 </footer>
 <!-- partial -->
 
-<script>
+ <script>
     const modeButton = document.getElementById('modeButton');
     const body = document.body;
+    const icon = modeButton.querySelector('svg');
+
     modeButton.addEventListener('click', () => {
       body.classList.toggle('dark');
+      if (body.classList.contains('dark')) {
+        icon.innerHTML = `
+          <path d="M12 20a8 8 0 100-16 8 8 0 000 16z"></path>
+          <circle cx="12" cy="12" r="5"></circle>
+        `;
+      } else {
+        icon.innerHTML = `
+          <path d="M12 20a8 8 0 100-16 8 8 0 000 16z"></path>
+          <path d="M12 2L12 6"></path>
+          <path d="M12 18L12 22"></path>
+          <path d="M4.22 4.22L5.64 5.64"></path>
+          <path d="M18.36 18.36L19.78 19.78"></path>
+          <path d="M1 12L3 12"></path>
+          <path d="M21 12L23 12"></path>
+          <path d="M4.22 19.78L5.64 18.36"></path>
+          <path d="M18.36 5.64L19.78 4.22"></path>
+        `;
+      }
     });
   </script>
   
