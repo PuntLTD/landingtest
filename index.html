@@ -1,22 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <title>PuntLTD</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PuntLTD</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="round.png"/>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PuntLTD</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="round.png"/>
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    :root {
+      --bg-color: #f5f5f5;
+      --text-color: #000000;
+    }
 
+    body.dark-mode {
+      --bg-color: #1f2937;
+      --text-color: #ffffff;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    .switch-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .dark-mode .switch {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<section class="w-full bg-white">
-  <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
+  <div class="switch" onclick="toggleDarkMode()">
+    <svg class="switch-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </div>
+
+  <section class="w-full bg-white">
+    <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
     <div class="flex w-full mx-auto text-left">
       <div class="relative inline-flex items-center mx-auto align-middle">
         <div class="text-center">
@@ -38,13 +94,10 @@
     </div>
   </div>
 </section>
+  
 
-
-
-
-
-<section class="flex relative bg-[#f5f5f5] items-center justify-center ">
-                <div class="relative items-center w-full px-5 py-12 mx-auto lg:px-16 lg:py-32 max-w-7xl md:px-12">
+  <section class="flex relative bg-[#f5f5f5] items-center justify-center">
+    <div class="relative items-center w-full px-5 py-12 mx-auto lg:px-16 lg:py-32 max-w-7xl md:px-12">
                   <div>
                     <div class="text-center">
                       <p class="mt-8 text-3xl font-extrabold tracking-tight text-black md:text-5xl">
@@ -149,12 +202,7 @@
             </div>
           </a>
         </li>
-                                             
-         
-                                             
-
-                                             
-        
+                        
                         
                     </ul>
                   </div>
@@ -162,10 +210,8 @@
               </section>
 
 
-  
-  
-   <footer aria-label="Site Footer" class="bg-white dark:bg-gray-900">
-  <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+  <footer aria-label="Site Footer" class="bg-white dark:bg-gray-900">
+     <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
     <div
       class="flex flex-col items-center gap-4 rounded-lg bg-indigo-600 p-6 shadow-lg sm:flex-row sm:justify-between"
     >
@@ -207,7 +253,16 @@
     </div>
   </div>
 </footer>
-<!-- partial -->
-  
+ 
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>
+
+
+
