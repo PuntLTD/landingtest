@@ -1,0 +1,31 @@
+.light {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+}
+
+.dark {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+}
+
+/* Update existing Tailwind classes to use variables */
+
+/* Example */
+.text-base {
+  color: var(--color-text);
+}
+
+.bg-white {
+  background-color: var(--color-bg);
+}
+
+/* Add custom classes for light and dark mode */
+
+.section {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.slate-500 {
+  color: var(--color-text);
+}
