@@ -8,21 +8,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PuntLTD</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="round.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="round.png"/>
-  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    body {
+      background-color: #1a202c;
+      color: #e2e8f0;
+    }
+    
+    .text-neutral-600 {
+      color: #e2e8f0;
+    }
+    
+    .text-gray-500 {
+      color: #a0aec0;
+    }
+    
+    .bg-white {
+      background-color: #2d3748;
+    }
+    
+    .text-black {
+      color: #e2e8f0;
+    }
+    
+    .text-slate-500 {
+      color: #a0aec0;
+    }
+    
+    .bg-[#f5f5f5] {
+      background-color: #4a5568;
+    }
+    
+    .text-indigo-600 {
+      color: #d53f8c;
+    }
+    
+    .bg-indigo-600 {
+      background-color: #805ad5;
+    }
+    
+    .text-white {
+      color: #e2e8f0;
+    }
+    
+    .dark\:bg-gray-900 {
+      background-color: #1a202c;
+    }
+    
+    .dark\:text-gray-900 {
+      color: #e2e8f0;
+    }
+    
+    .dark\:text-gray-800 {
+      color: #a0aec0;
+    }
+    
+    .dark\:text-white {
+      color: #e2e8f0;
+    }
+    
+    .dark\:bg-indigo-600 {
+      background-color: #805ad5;
+    }
+    
+    .dark\:text-indigo-600 {
+      color: #d53f8c;
+    }
+
+    /* Mobile styles */
+@media screen and (max-width: 767px) {
+  .small-image {
+    width: 70px;
+  }
+}
+
+/* PC styles */
+@media screen and (min-width: 768px) {
+  .small-image {
+    width: 90px;
+  }
+}
+    
+  </style>
 </head>
+  
 <body>
 <!-- partial:index.partial.html -->
-<section class="w-full bg-[#1e293b]"> <!-- Updated background color -->
+<section class="w-full bg-white dark:bg-gray-900">
   <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
     <div class="flex w-full mx-auto text-left">
       <div class="relative inline-flex items-center mx-auto align-middle">
         <div class="text-center">
-          <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-[#e2e8f0] md:text-5xl lg:text-6xl lg:max-w-7xl"> <!-- Updated title text color -->
-            Not just another agency <br class="hidden lg:block">            
+          <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+            Not just another agency <br class="hidden lg:block">
           </h1>
-          <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-[#cbd5e1]">This is a subheader lol</p> <!-- Updated subtitle text color -->
+          <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500 dark:text-gray-800">This is a subheader lol</p>
           <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
             <div class="mt-3 rounded-lg sm:mt-0">
               <button class="items-center block px-5 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Get bundle</button>
@@ -37,34 +119,35 @@
   </div>
 </section>
 
-<section class="flex relative bg-[#f5f5f5] items-center justify-center">
+<section class="flex relative bg-[#f5f5f5] dark:bg-gray-900 items-center justify-center">
   <div class="relative items-center w-full px-5 py-12 mx-auto lg:px-16 lg:py-32 max-w-7xl md:px-12">
     <div>
       <div class="text-center">
-        <p class="mt-8 text-3xl font-extrabold tracking-tight text-black md:text-5xl">
+        <p class="mt-8 text-3xl font-extrabold tracking-tight text-black md:text-5xl dark:text-white">
           Our tools 🔥<br>
         </p>
-        <p class="max-w-xl mx-auto mt-4 text-base lg:text-xl text-[#cbd5e1]"> <!-- Updated subtitle text color -->
+        <p class="max-w-xl mx-auto mt-4 text-base lg:text-xl text-slate-500 dark:text-gray-800">
         </p>
       </div>
     </div>
+
     <div class="max-w-lg mx-auto mt-24">
       <ul class="space-y-3" role="list">
         <li>
           <a href="https://inspire.punt.ltd/">
-            <div class="relative flex items-start p-4 space-x-3 bg-[#334155] shadow group rounded-2xl"> <!-- Updated card background color -->
+            <div class="relative flex items-start p-4 space-x-3 bg-white dark:bg-gray-800 shadow group rounded-2xl">
               <div class="flex-shrink-0">
                 <span class="justify-center inline-flex items-center">
                   <img src="https://i.ibb.co/RTsPj5p/sketch-1685790511438.png" alt="Image" class="rounded-lg small-image">
                 </span>
               </div>
               <div class="flex-1 min-w-0">
-                <div class="text-lg font-medium text-gray-900">
+                <div class="text-lg font-medium text-gray-900 dark:text-white">
                   <span class="absolute inset-0" aria-hidden="true"></span>
                   Inspire Me
                   <span class="font-medium bg-gray-100 inline-flex items-center absolute top-0 right-0 mt-2 mr-2 px-2.5 py-0.5 rounded-full text-gray-800 text-xs">MP</span>
                 </div>
-                <p class="mt-3 text-gray-500">
+                <p class="mt-3 text-gray-500 dark:text-gray-400">
                   Explore new websites.
                 </p>
               </div>
@@ -73,19 +156,19 @@
         </li>
         <li>
           <a href="https://text.punt.ltd/">
-            <div class="relative flex items-start p-4 space-x-3 bg-[#334155] shadow group rounded-2xl"> <!-- Updated card background color -->
+            <div class="relative flex items-start p-4 space-x-3 bg-white dark:bg-gray-800 shadow group rounded-2xl">
               <div class="flex-shrink-0">
                 <span class="justify-center inline-flex items-center">
                   <img src="https://i.ibb.co/9tP3PLW/sketch-1685790511533.png" alt="Image" class="rounded-lg small-image">
                 </span>
               </div>
               <div class="flex-1 min-w-0">
-                <div class="text-lg font-medium text-gray-900">
+                <div class="text-lg font-medium text-gray-900 dark:text-white">
                   <span class="absolute inset-0" aria-hidden="true"></span>
                   Not Lorem Ipsum
                   <span class="font-medium bg-gray-100 inline-flex items-center absolute top-0 right-0 mt-2 mr-2 px-2.5 py-0.5 rounded-full text-gray-800 text-xs">EXP</span>
                 </div>
-                <p class="mt-3 text-gray-500">
+                <p class="mt-3 text-gray-500 dark:text-gray-400">
                   Text to fill space but different.
                 </p>
               </div>
@@ -94,19 +177,19 @@
         </li>
         <li>
           <a href="https://paywall.punt.ltd/">
-            <div class="relative flex items-start p-4 space-x-3 bg-[#334155] shadow group rounded-2xl"> <!-- Updated card background color -->
+            <div class="relative flex items-start p-4 space-x-3 bg-white dark:bg-gray-800 shadow group rounded-2xl">
               <div class="flex-shrink-0">
                 <span class="justify-center inline-flex items-center">
                   <img src="https://i.ibb.co/zS0Z5zG/sketch-1685790511635.png" alt="Image" class="rounded-lg small-image">
                 </span>
               </div>
               <div class="flex-1 min-w-0">
-                <div class="text-lg font-medium text-gray-900">
+                <div class="text-lg font-medium text-gray-900 dark:text-white">
                   <span class="absolute inset-0" aria-hidden="true"></span>
                   Paywall Remover
                   <span class="font-medium bg-gray-100 inline-flex items-center absolute top-0 right-0 mt-2 mr-2 px-2.5 py-0.5 rounded-full text-gray-800 text-xs">EXP</span>
                 </div>
-                <p class="mt-3 text-gray-500">
+                <p class="mt-3 text-gray-500 dark:text-gray-400">
                   Access paywall-free articles.
                 </p>
               </div>
@@ -115,19 +198,19 @@
         </li>
         <li>
           <a href="https://audio.punt.ltd/">
-            <div class="relative flex items-start p-4 space-x-3 bg-[#334155] shadow group rounded-2xl"> <!-- Updated card background color -->
+            <div class="relative flex items-start p-4 space-x-3 bg-white dark:bg-gray-800 shadow group rounded-2xl">
               <div class="flex-shrink-0">
                 <span class="justify-center inline-flex items-center">
                   <img src="https://i.ibb.co/nRC2ftp/sketch-1685790512184.png" alt="Image" class="rounded-lg small-image">
                 </span>
               </div>
               <div class="flex-1 min-w-0">
-                <div class="text-lg font-medium text-gray-900">
+                <div class="text-lg font-medium text-gray-900 dark:text-white">
                   <span class="absolute inset-0" aria-hidden="true"></span>
                   Audio Player
                   <span class="font-medium bg-gray-100 inline-flex items-center absolute top-0 right-0 mt-2 mr-2 px-2.5 py-0.5 rounded-full text-gray-800 text-xs">MP</span>
                 </div>
-                <p class="mt-3 text-gray-500">
+                <p class="mt-3 text-gray-500 dark:text-gray-400">
                   Animated audio player.
                 </p>
               </div>
@@ -139,26 +222,37 @@
   </div>
 </section>
 
-
-<footer aria-label="Site Footer" class="bg-[#1e293b] dark:bg-gray-900"> <!-- Updated background color -->
+<footer aria-label="Site Footer" class="bg-white dark:bg-gray-900">
   <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-    <div class="flex flex-col items-center gap-4 rounded-lg bg-indigo-600 p-6 shadow-lg sm:flex-row sm:justify-between">
-      <strong class="text-xl text-white sm:text-xl">
-        Don't miss on anything
-      </strong>
-      <a class="inline-flex items-center gap-2 rounded-full border border-white bg-white px-8 py-3 text-indigo-600 hover:bg-transparent hover:text-white focus:outline-none focus:ring active:bg-white/90" href="https://www.twitter.com/PuntLTD">
-        <span class="text-sm font-medium"> Click here </span>
-        <svg class="h-5 w-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
-      </a>
+    <div class="grid grid-cols-2 gap-8 md:grid-cols-4 xl:gap-16">
+      <div class="space-y-12 md:space-y-0">
+        <div class="flex items-center justify-center">
+          <a href="#">
+            <img src="round.png" alt="Logo" class="h-10">
+          </a>
+        </div>
+      </div>
+      <div class="space-y-12 md:space-y-0">
+        <h3 class="text-sm font-semibold tracking-wider text-gray-900 dark:text-white uppercase">Product</h3>
+        <ul class="mt-6 space-y-6">
+          <li>
+            <a href="https://inspire.punt.ltd/" class="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">Inspire Me</a>
+          </li>
+          <li>
+            <a href="https://text.punt.ltd/" class="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">Not Lorem Ipsum</a>
+          </li>
+          <li>
+            <a href="https://paywall.punt.ltd/" class="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">Paywall Remover</a>
+          </li>
+          <li>
+            <a href="https://audio.punt.ltd/" class="text-base text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200">Audio Player</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <br>
-    <p class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:mt-0 sm:text-center">
-      Copyright &copy; 2023. All rights & wrongs reserved.
-    </p>
   </div>
 </footer>
 <!-- partial -->
+<script src="./script.js"></script>
 </body>
 </html>
